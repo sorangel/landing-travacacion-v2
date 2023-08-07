@@ -1,0 +1,757 @@
+/* Reset de estilos básico */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, li, img, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Georama,Arial, sans-serif;
+    text-decoration: none; /* Evitar subrayado en enlaces */
+}
+
+/* Añadir estas reglas para quitar las líneas debajo de enlaces y botones */
+a, button {
+    outline: none; /* Quitar el resaltado de enlaces y botones al hacer clic */
+    border: none; /* Quitar el borde predeterminado */
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 40px;
+}
+
+.logo img {
+    width: 186px;
+    height: 48px;
+    flex-shrink: 0; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.header-icon {
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del custom select */
+.custom-select {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #00BCD4;
+    margin: 10px;
+    width: 110px;
+    height: 50px;
+}
+
+.custom-select .selected-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-select .selected-option span {
+    margin-left: 5px;
+}
+
+.custom-select .icon-select {
+    margin: 5px;
+}
+
+.custom-select .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 8px 0;
+    list-style: none;
+    width: 100%;
+}
+
+.custom-select .options li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.custom-select .options li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para que estén en fila (row) */
+.profile-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #00BCD4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-avatar img {
+    width: 25px;
+}
+
+.header-icon img {
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.question-header {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.question-header a {
+
+    color: #000;
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.question-header a:hover {
+    text-decoration: underline; /* Subrayar el enlace al pasar el cursor */
+}
+
+.question-header p {
+    padding: 10px;
+}
+
+
+.section-title-question {
+    font-size: 16px;
+    margin: 20px;
+}
+
+
+/* Estilos del hero */
+.hero-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: 0px 0px 24px 24px;
+
+    background-image: linear-gradient(180deg, rgba(33, 33, 33, 0.08) 37.14%, rgba(33, 33, 33, 0.80) 96.44%), linear-gradient(0deg, rgba(33, 33, 33, 0.30) 0%, rgba(33, 33, 33, 0.30) 100%), url(<path-to-image>);
+    background-position: 50%;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo semitransparente */
+    border-radius: 0px 0px 24px 24px;
+    align-self: stretch;
+}
+
+
+.hero-title {
+    width: 70vh;
+    color: #F8F9F9;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px; /* 140% */
+    letter-spacing: 1px;
+    margin-bottom: 8vh;
+    z-index: 1;
+}
+
+.hero-title h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+    letter-spacing: 0.75px;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-self: stretch;
+    margin-bottom: 10vh;
+
+}
+
+.hero-button a.btn-primary {
+    background-color: white;
+    color: black; /* Cambiar el color del texto a negro */
+    width: 180px;
+    height: 35px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-button a.btn-primary:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.hero-button span {
+    margin: 20px;
+    color: #F8F9F9;
+}
+
+.hero-button a {
+    color: #F8F9F9;
+}
+
+.hero-button button {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    z-index: 1;
+}
+
+.hero-question {
+    position: absolute;
+    flex-direction: column;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F9F9;
+    text-align: center;
+    z-index: 2; /* Asegura que el elemento esté por encima del overlay */
+}
+
+/* Estilos para la sección "Cómo funciona" */
+.how-it-works-section {
+    padding: 40px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-question a {
+    color: white; /* Cambia el color del enlace a blanco */
+    text-decoration: none;
+}
+
+.hero-question img {
+    margin-top: 20px; /* Ajusta la distancia entre el texto y la imagen */
+}
+
+.how-it-works-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.how-it-works-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.icon-item {
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.icon-item img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #c2eff5;
+}
+
+.description-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+.description-item p {
+    padding: 0;
+    margin: 0;
+    width: 250px;
+}
+
+.description-item h3 {
+    margin: 10px;
+}
+
+.learn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00BCD4;
+    width: 250px;
+    height: 56px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.learn-more img {
+    padding: 10px;
+}
+
+.learn-more button {
+    border-radius: 10px;
+    border: none;
+    color: black;
+    background: none;
+}
+
+.learn-more-question button {
+    border-radius: 10px;
+    border: none;
+    color: black;
+    background: none;
+}
+
+.learn-more-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00BCD4;
+    width: 250px;
+    height: 56px;
+    border-radius: 10px;
+    margin: 20px;
+    padding-right: 20px;
+}
+
+.learn-more-question img {
+    padding: 10px;
+}
+
+.discover-us-section {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: #fafafa;
+
+}
+
+.discover-us-section-images {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.img-item {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+
+.question-section {
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: #fafafa;
+    margin: 30px 0;
+}
+
+.every-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+
+
+.question-item {
+    width: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    line-height: 50px;
+}
+
+.question {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 10vh;
+
+}
+
+.icono-question {
+    display: flex;
+    width: 200px;
+}
+
+.icono-question-main {
+    display: flex;
+    width: 200px;
+
+}
+
+.question-main {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 10vh;
+    text-align: start;
+    padding: 0;
+    margin-right: 20px; /* Agrega espacio entre la pregunta y la imagen */
+
+}
+
+
+.question-item {
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+    display: flex;
+    align-items: start; /* Alinea verticalmente los elementos dentro del contenedor */
+    flex-direction: row; /* Cambia el valor a "row" para colocar los elementos en fila */
+    text-align: start;
+    padding: 0;
+    margin-bottom: 20px; /* Agrega espacio entre cada pregunta */
+}
+
+
+.icono-question-main {
+    width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Alinea el ícono con la pregunta */
+    align-items: flex-start; /* Alinea el ícono con la pregunta */
+}
+
+
+.question-main span {
+    font-weight: normal;
+    line-height: 10px;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 30px;
+    margin: 20px;
+}
+
+.footer-svg {
+    margin: 20px;
+}
+
+.footer-content-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.footer-content-us p {
+    margin-right: 10px;
+}
+
+/* ---------------------Media query para resolución de pantalla móvil -------------------------------------------*/
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Ocultar header menu con el custom select */
+    .custom-select {
+        display: none;
+    }
+
+    .question-header {
+        display: none;
+    }
+
+    .every-question {
+        width: 400px;
+        padding-left: 30px;
+        margin: 20px;
+
+    }
+
+    /* Ajustar la altura del hero-section */
+    .hero-section {
+        height: 80vh;
+        border-radius: 0 0 5% 5%;
+    }
+
+    /* Ajustar el tamaño del texto en el hero-title */
+    .hero-title {
+        width: 90%; /* Usar porcentaje para evitar contenido demasiado ancho */
+        font-size: 35px; /* Reducir tamaño del texto */
+        line-height: 50px;
+        text-align: start;
+    }
+
+    .hero-title h5 {
+        line-height: 30px;
+    }
+
+    .hero-title h2 {
+        margin-bottom: 0;
+    }
+
+    /* Ajustar el tamaño de los botones en el hero-button */
+    .hero-button button {
+        width: 150px;
+        height: 50px;
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    /* Mostrar los íconos y las descripciones en columnas en how-it-works-section */
+    .how-it-works-icons {
+        flex-direction: column;
+    }
+
+    /* Ajustar el tamaño de los íconos en how-it-works-icons */
+    .icon-item img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #c2eff5;
+    }
+
+    .icon-item {
+        margin: 0;
+    }
+
+    .description-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: auto;
+        margin-left: 15px;
+    }
+
+    /* Mostrar las descripciones y los íconos en fila (row) en how-it-works-icons */
+    .how-it-works-icons .icon-item {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    .description-item p {
+        width: 250px; /* Ancho máximo del texto para que se ajuste mejor */
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .description-item h3 {
+        margin: 0;
+    }
+
+    /* Ajustar el tamaño de las imágenes en discover-us-section */
+    .discover-us-section-images .img-item {
+        width: 100%;
+    }
+
+    .discover-us-section-images {
+        overflow: hidden;
+    }
+
+    .discover-us-section {
+        padding: 20px;
+    }
+
+    /* Mostrar las preguntas en columnas en question-section */
+    /* Estilos para la sección "every question" */
+    .every-question {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .every-question .question-item {
+        margin-left: 20px;
+        padding-left: 5vh;
+    }
+
+    .learn-more-question {
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .question-item {
+        width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+        display: flex;
+        align-items: start; /* Alinea verticalmente los elementos dentro del contenedor */
+        flex-direction: row; /* Cambia el valor a "row" para colocar los elementos en fila */
+        text-align: start;
+        padding: 0;
+    }
+
+    .question-item p {
+        margin-top: 0;
+    }
+
+
+    .question-main {
+        text-align: start;
+        width: 60vh;
+        height: 100px;
+        padding: 0;
+    }
+
+    .question-main p {
+        margin-top: 0;
+        line-height: 20px;
+    }
+
+    .question-main span {
+        text-align: start;
+        padding: 0;
+    }
+
+    .question-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        width: 100%;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px; /* 128.571% */
+        letter-spacing: 1px;
+    }
+
+    .icono-question-main {
+        width: 200px;
+        position: relative;
+        justify-content: flex-start;
+
+
+    }
+
+    .question-main span{
+        line-height: 20px;
+
+    }
+
+
+    .icon-select img {
+        padding-top: 20px;
+    }
+
+
+    /* Ajustar el tamaño del texto en el footer */
+    .footer {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-content {
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    .footer-content p {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .footer-svg {
+        width: 300px;
+    }
+
+    .footer-content-us {
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .footer-content-us p {
+        flex-direction: column;
+        width: 200px;
+        margin: 0;
+    }
+}
